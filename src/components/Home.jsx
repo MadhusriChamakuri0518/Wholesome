@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DesktopImage from "../assets/HomeDesktopBg.jpg";
 import MobileImage from "../assets/HomemobileBg.jpg";
+import SecondHomePage from "./SecondHomePage";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,13 +9,13 @@ const Home = () => {
   return (
     <div className="relative">
       {/* -----Navbar starts here----- */}
-      <nav className="h-20 bg-black w-full flex items-center justify-between px-4 md:px-15">
+      <nav className="h-20 bg-black w-full flex items-center text-center justify-between px-4 md:px-10 lg:px-15">
         <div className="text-4xl font-bold text-white">
           <span className="text-yellow-400">Whole</span>some
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 text-lg text-white font-semibold md:gap-10 my-1.5">
+        <ul className="hidden md:flex gap-6 text-lg text-white font-semibold lg:gap-10 my-1.5">
           <li>Plans</li>
           <li>Delivery Areas</li>
           <li>Contact</li>
@@ -71,7 +72,7 @@ const Home = () => {
             alt="Desktop Background"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black opacity-70"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black opacity-60"></div>
           <img
             className="w-full h-screen opacity-70 md:hidden "
             src={MobileImage}
@@ -95,8 +96,10 @@ const Home = () => {
               Learn More
             </button>
           </div>
+          <p class="font-pacifico text-2xl">You'll love it!</p>
         </div>
       </header>
+      <SecondHomePage/>
     </div>
   );
 };
