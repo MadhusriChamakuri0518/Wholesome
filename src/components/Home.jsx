@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DesktopImage from "../assets/HomeDesktopBg.jpg";
 import MobileImage from "../assets/HomemobileBg.jpg";
 import SecondHomePage from "./SecondHomePage";
+import ThirdHomePage from "./ThirdHomePage";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ const Home = () => {
 
       {/* Right Drawer Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 sm:w-1/2 bg-black opacity-70 text-white z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-2/3 sm:w-1/2 bg-black opacity-90 text-white z-50 transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -100,6 +101,7 @@ const Home = () => {
         </div>
       </header>
       <SecondHomePage/>
+      <ThirdHomePage/>
     </div>
   );
 };
