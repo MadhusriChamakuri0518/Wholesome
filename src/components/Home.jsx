@@ -5,6 +5,7 @@ import SecondHomePage from "./SecondHomePage";
 import ThirdHomePage from "./ThirdHomePage";
 import FourthHomePage from "./FourthHomePage";
 import Plans from "./Plans";
+import Footer from "./Footer";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -106,6 +107,7 @@ const Home = () => {
       <ThirdHomePage />
       <FourthHomePage />
       <Plans />
+      <Footer />
     </div>
   );
 };
