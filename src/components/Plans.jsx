@@ -12,7 +12,7 @@ import {
 const Plans = () => {
   return (
     <div>
-      <div className="bg-gray-500">
+      <div className="bg-gray-500 pb-4">
         <h2 className="font-pacifico text-white text-center pt-8 md:pt-16 text-3xl mb-4 px-10">
           plans and pricing
         </h2>

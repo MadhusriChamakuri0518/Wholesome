@@ -15,7 +15,7 @@ const Footer = () => {
           <p>No 343, BBMP No. 8, 8th Main Road,</p>
           <p>Gachibowli, Hyderabad - 500081</p>
         </div>
-        <div className="mt-12 md:mt-0">
+        <div className="mt-12 md:mt-0 mb-8 md:mb-0">
           <ul className="flex flex-col md:flex-row gap-12">
             <li>
               <h2 className="font-semibold">Quick Links</h2>
@@ -34,20 +34,20 @@ const Footer = () => {
             <li>
               <h2 className="font-semibold">Reach Us</h2>
               <div className="flex gap-2">
-                <FontAwesomeIcon icon={faPhone} className="text-l md:mt-1.5" />
+                <FontAwesomeIcon icon={faPhone} className="text-l mt-1.5" />
                 <p>+91 12345 12345</p>
               </div>
               <div className="flex gap-2">
                 <FontAwesomeIcon
                   icon={faEnvelopeOpenText}
-                  className="text-l md:mt-1.5"
+                  className="text-l mt-1.5"
                 />
                 <p>contact@wholesome.in</p>
               </div>
               <div className="flex gap-2">
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="text-l md:mt-1.5"
+                  className="text-l mt-1.5"
                 />
                 <p>getWholesomeNutrition</p>
               </div>

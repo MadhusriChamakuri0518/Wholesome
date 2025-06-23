@@ -20,7 +20,7 @@ const FourthHomePage = () => {
           <div className="flex flex-col md:flex-row md:gap-4 md:mb-4">
             <div>
               <img
-                className="hidden md:block w-26 h-26 mt-6"
+                className="hidden md:block w-26 h-26 mt-10"
                 src={discover}
                 alt=""
               />
@@ -49,7 +49,7 @@ const FourthHomePage = () => {
             </div>
             <div>
               <img
-                className="hidden md:block w-30 h-30 mt-6"
+                className="hidden md:block w-30 h-30 mt-10"
                 src={plan}
                 alt=""
               />
@@ -58,7 +58,7 @@ const FourthHomePage = () => {
           <div className="flex flex-col md:flex-row md:gap-4 md:mb-4">
             <div>
               <img
-                className="hidden md:block w-30 h-30 mt-6"
+                className="hidden md:block w-30 h-30 mt-10"
                 src={deliver}
                 alt=""
               />
@@ -87,7 +87,7 @@ const FourthHomePage = () => {
             </div>
             <div>
               <img
-                className="hidden md:block w-30 h-30 mt-6"
+                className="hidden md:block w-30 h-30 mt-10"
                 src={track}
                 alt=""
               />
