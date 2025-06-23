@@ -3,6 +3,8 @@ import DesktopImage from "../assets/HomeDesktopBg.jpg";
 import MobileImage from "../assets/HomemobileBg.jpg";
 import SecondHomePage from "./SecondHomePage";
 import ThirdHomePage from "./ThirdHomePage";
+import FourthHomePage from "./FourthHomePage";
+import Plans from "./Plans";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -90,18 +92,20 @@ const Home = () => {
             while taking care of your daily nutrition.
           </p>
           <div className="flex flex-col gap-6 my-4 md:gap-12 md:flex-row md:my-6">
-            <button className="bg-yellow-400 text-black font-semibold py-4 px-28 hover:bg-yellow-300">
+            <button className="bg-yellow-400 text-black font-semibold py-4 px-28 hover:bg-yellow-300 duration-200 ease-in">
               Get Onboard
             </button>
-            <button className="bg-black text-white font-semibold py-4 px-28 border border-white hover:bg-yellow-300 hover:text-black">
+            <button className="bg-black text-white font-semibold py-4 px-28 border border-white hover:bg-yellow-300 hover:text-black duration-200 ease-in">
               Learn More
             </button>
           </div>
           <p class="font-pacifico text-2xl">You'll love it!</p>
         </div>
       </header>
-      <SecondHomePage/>
-      <ThirdHomePage/>
+      <SecondHomePage />
+      <ThirdHomePage />
+      <FourthHomePage />
+      <Plans />
     </div>
   );
 };

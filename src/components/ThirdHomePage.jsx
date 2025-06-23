@@ -21,7 +21,7 @@ const ThirdHomePage = () => {
             Discover the difference that a thoughtfully designed diet plan and
             nutritious food can have on your health and well-being.
           </p>
-          <button className="bg-white text-black font-semibold py-4 px-20 border border-white hover:bg-yellow-300 hover:text-black transition">
+          <button className="bg-white text-black font-semibold py-4 px-20 border border-white opacity-70 hover:opacity-100 hover:bg-yellow-300 hover:text-black transition">
             Get A 3-Day Trial
           </button>
         </div>
