@@ -62,7 +62,7 @@ const Plans = () => {
               </ul>
             </div>
             <div className="flex justify-center mt-6">
-              <button className="bg-yellow-300 text-black border-2 border-black font-semibold py-4 px-14 hover:bg-yellow-200">
+              <button className="bg-gray-700 text-white border-2 border-black font-semibold py-4 px-14 hover:bg-yellow-300 hover:text-black">
                 Try it Now
               </button>
             </div>
@@ -111,7 +111,7 @@ const Plans = () => {
               </ul>
             </div>
             <div className="flex justify-center mt-6">
-              <button className="bg-yellow-300 text-black border-2 border-black font-semibold py-4 px-14 hover:bg-yellow-200">
+             <button className="bg-gray-700 text-white border-2 border-black font-semibold py-4 px-14 hover:bg-yellow-300 hover:text-black">
                 Get Started
               </button>
             </div>
@@ -167,7 +167,7 @@ const Plans = () => {
               </ul>
             </div>
             <div className="flex justify-center mt-6">
-              <button className="bg-black text-white border-2 opacity-70 border-black font-semibold py-4 px-14 hover:bg-yellow-300 hover:text-black">
+              <button className="bg-yellow-300 text-black border-2 border-black font-semibold py-4 px-14 hover:bg-yellow-200">
                 Get Started
               </button>
             </div>

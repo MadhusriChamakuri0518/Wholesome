@@ -5,6 +5,7 @@ import SecondHomePage from "./SecondHomePage";
 import ThirdHomePage from "./ThirdHomePage";
 import FourthHomePage from "./FourthHomePage";
 import Plans from "./Plans";
+import FAQ from "./FAQ";
 import Footer from "./Footer";
 
 const Home = () => {
@@ -18,7 +19,6 @@ const Home = () => {
           <span className="text-yellow-400">Whole</span>some
         </div>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 text-lg text-white font-semibold lg:gap-10 my-1.5">
           <li>Plans</li>
           <li>Delivery Areas</li>
@@ -41,7 +41,7 @@ const Home = () => {
 
       {/* Right Drawer Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 sm:w-1/2 bg-black opacity-90 text-white z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-2/3 sm:w-1/2 bg-black opacity-95 text-white z-50 transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -107,6 +107,7 @@ const Home = () => {
       <ThirdHomePage />
       <FourthHomePage />
       <Plans />
+      <FAQ />
       <Footer />
     </div>
   );
