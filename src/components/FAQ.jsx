@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import faq from "../assets/FAQ.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const faqData = [
   {
@@ -51,11 +53,7 @@ const FAQ = () => {
     <div className="w-full">
       <div className="flex flex-col md:flex-row items-stretch gap-10">
         <div className="w-full md:w-1/3 hidden md:flex">
-          <img
-            src={faq}
-            alt="FAQ"
-            className="object-cover w-full h-full"
-          />
+          <img src={faq} alt="FAQ" className="object-cover w-full h-full" />
         </div>
 
         <div className="p-10 w-full md:w-2/3 flex flex-col justify-center">
@@ -82,7 +80,11 @@ const FAQ = () => {
                     {item.question}
                   </span>
                   <span className="text-xl">
-                    {openIndex === index ? "−" : "+"}
+                    {openIndex === index ? (
+                      <FontAwesomeIcon icon={faAngleUp} />
+                    ) : (
+                      <FontAwesomeIcon icon={faAngleDown} />
+                    )}
                   </span>
                 </button>
                 {openIndex === index && (

@@ -88,7 +88,7 @@ const SecondHomePage = () => {
             </p>
           </div>
 
-          <div className="bg-gray-600 text-left p-8 w-auto h-auto">
+          <div className="bg-gray-600 text-gray-300 text-left p-8 w-auto h-auto">
             <div className="flex gap-4">
               <FontAwesomeIcon icon={faLeaf} className="text-2xl md:mt-2" />
               <h2 className="font-bold text-2xl mb-1">Freshness Guaranteed</h2>
