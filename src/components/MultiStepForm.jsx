@@ -241,13 +241,13 @@ const MultiStepForm = () => {
           <div className="flex justify-between gap-4">
             <button
               type="button"
-              className="bg-gray-600 px-6 py-2 text-white font-semibold w-1/2"
+              className="bg-gray-600 px-6 py-2 text-white font-semibold w-1/2 hover:bg-gray-500 duration-200"
             >
               Back
             </button>
             <button
               type="submit"
-              className="bg-yellow-400 px-6 py-2 text-white font-semibold w-1/2"
+              className="bg-yellow-400 px-6 py-2 text-white font-semibold w-1/2 hover:bg-yellow-300 duration-200"
             >
               Save
             </button>

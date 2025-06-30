@@ -8,7 +8,7 @@ const Footer = () => {
     <div>
       <div className="p-10 flex flex-col md:flex-row md:justify-around">
         <div>
-          <div className="text-4xl font-bold text-black py-2">
+          <div className="text-4xl font-bold text-black">
             <span className="text-yellow-400">Whole</span>some
           </div>
           <p>© 2025 Wholesome by BodyFit LLP.</p>
