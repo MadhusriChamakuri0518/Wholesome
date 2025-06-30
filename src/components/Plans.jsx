@@ -8,11 +8,13 @@ import {
   faLeaf,
   faWandSparkles,
 } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Plans = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <div className="bg-gray-500 pb-4">
+      <div className="bg-gray-400 pb-4">
         <h2 className="font-pacifico text-white text-center pt-8 md:pt-16 text-3xl mb-4 px-10">
           plans and pricing
         </h2>
@@ -24,7 +26,10 @@ const Plans = () => {
           <p className="font-semibold text-center text-xl py-2">
             Still Unsure? Start With A Short Trial!
           </p>
-          <button className="px-6 py-2 bg-black text-white font-semibold">
+          <button
+            className="px-6 py-2 bg-black text-white font-semibold"
+            onClick={() => navigate("/purchase")}
+          >
             Let's Go!
           </button>
         </div>
@@ -111,7 +116,7 @@ const Plans = () => {
               </ul>
             </div>
             <div className="flex justify-center mt-6">
-             <button className="bg-gray-700 text-white border-2 border-black font-semibold py-4 px-14 hover:bg-yellow-300 hover:text-black">
+              <button className="bg-gray-700 text-white border-2 border-black font-semibold py-4 px-14 hover:bg-yellow-300 hover:text-black">
                 Get Started
               </button>
             </div>

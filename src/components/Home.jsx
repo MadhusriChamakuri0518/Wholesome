@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import DesktopImage from "../assets/HomeDesktopBg.jpg";
 import MobileImage from "../assets/HomemobileBg.jpg";
 import SecondHomePage from "./SecondHomePage";
@@ -6,68 +6,18 @@ import ThirdHomePage from "./ThirdHomePage";
 import FourthHomePage from "./FourthHomePage";
 import Plans from "./Plans";
 import FAQ from "./FAQ";
-import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const secondPageRef = useRef(null);
+
+  const handleLearnMore = () => {
+    secondPageRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="relative">
-      {/* -----Navbar starts here----- */}
-      <nav className="h-20 bg-black w-full flex items-center text-center justify-between px-4 md:px-10 lg:px-15">
-        <div className="text-4xl font-bold text-white">
-          <span className="text-yellow-400">Whole</span>some
-        </div>
-
-        <ul className="hidden md:flex gap-6 text-lg text-white font-semibold lg:gap-10 my-1.5">
-          <li>Plans</li>
-          <li>Delivery Areas</li>
-          <li>Contact</li>
-          <li className="text-black bg-yellow-400 py-1.5 px-3 rounded-md hover:bg-yellow-200">
-            Get A 3-Day Trial
-          </li>
-        </ul>
-
-        {/* Hamburger icon for mobile */}
-        <div className="md:hidden">
-          <button
-            className="text-4xl mt-2 text-gray-300 px-2"
-            onClick={() => setMenuOpen(true)}
-          >
-            &#8801;
-          </button>
-        </div>
-      </nav>
-
-      {/* Right Drawer Menu */}
-      <div
-        className={`fixed top-0 right-0 h-full w-2/3 sm:w-1/2 bg-black opacity-95 text-white z-50 transform transition-transform duration-300 ease-in-out ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex justify-end p-4">
-          <button
-            className="text-3xl text-gray-300"
-            onClick={() => setMenuOpen(false)}
-          >
-            &times;
-          </button>
-        </div>
-        <ul className="flex flex-col items-start gap-6 p-6 text-lg font-semibold">
-          <li onClick={() => setMenuOpen(false)}>Plans</li>
-          <li onClick={() => setMenuOpen(false)}>Delivery Areas</li>
-          <li onClick={() => setMenuOpen(false)}>Contact</li>
-          <li
-            className="text-black bg-yellow-400 py-1.5 px-3 rounded-md"
-            onClick={() => setMenuOpen(false)}
-          >
-            Get A 3-Day Trial
-          </li>
-        </ul>
-      </div>
-      {/* -----NavBar ends here----- */}
-
-      {/* -----Header starts here----- */}
       <header className="relative h-screen">
         <div>
           <img
@@ -75,10 +25,9 @@ const Home = () => {
             src={DesktopImage}
             alt="Desktop Background"
           />
-
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black opacity-60"></div>
           <img
-            className="w-full h-screen opacity-70 md:hidden "
+            className="w-full h-screen opacity-70 md:hidden"
             src={MobileImage}
             alt="Mobile background"
           />
@@ -93,22 +42,29 @@ const Home = () => {
             while taking care of your daily nutrition.
           </p>
           <div className="flex flex-col gap-6 my-4 md:gap-12 md:flex-row md:my-6">
-            <button className="bg-yellow-400 text-black font-semibold py-4 px-28 hover:bg-yellow-300 duration-200 ease-in">
+            <button
+              className="bg-yellow-400 text-black font-semibold py-4 px-28 hover:bg-yellow-300 duration-200 ease-in"
+              onClick={() => navigate("/purchase")}
+            >
               Get Onboard
             </button>
-            <button className="bg-black text-white font-semibold py-4 px-28 border border-white hover:bg-yellow-300 hover:text-black duration-200 ease-in">
+            <button
+              className="bg-black text-white font-semibold py-4 px-28 border border-white hover:bg-yellow-300 hover:text-black duration-200 ease-in"
+              onClick={handleLearnMore}
+            >
               Learn More
             </button>
           </div>
-          <p class="font-pacifico text-2xl">You'll love it!</p>
+          <p className="font-pacifico text-2xl">You'll love it!</p>
         </div>
       </header>
-      <SecondHomePage />
+      <div ref={secondPageRef}>
+        <SecondHomePage />
+      </div>
       <ThirdHomePage />
       <FourthHomePage />
       <Plans />
       <FAQ />
-      <Footer />
     </div>
   );
 };

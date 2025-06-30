@@ -1,7 +1,9 @@
 import React from "react";
 import yellowBg from "../assets/yellowBg.jpg";
+import { useNavigate } from "react-router-dom";
 
 const ThirdHomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative w-full overflow-hidden">
       <img
@@ -21,7 +23,10 @@ const ThirdHomePage = () => {
             Discover the difference that a thoughtfully designed diet plan and
             nutritious food can have on your health and well-being.
           </p>
-          <button className="bg-white text-black font-semibold py-4 px-20 border border-white opacity-70 hover:opacity-100 hover:bg-yellow-300 hover:text-black transition">
+          <button
+            className="bg-white text-black font-semibold py-4 px-20 border border-white opacity-70 hover:opacity-100 hover:bg-yellow-300 hover:text-black transition"
+            onClick={() => navigate("/purchase")}
+          >
             Get A 3-Day Trial
           </button>
         </div>
